@@ -24,7 +24,7 @@ $(document).ready( function( ) {
   $(document).on( 'click', '#add-second-address', function( ) {
     var addressSpace = $("#address-group").clone( );
     addressSpace.find("#address-header").text( "--" );
-    addressSpace.attr( "class", "address-group-extra" );
+    addressSpace.attr( "class", "address-group address-group-extra" );
     $("#contact-form-group").append(addressSpace);
   });
 
@@ -46,10 +46,6 @@ $(document).ready( function( ) {
 
       var newAddress = new Address( street, city, state, zip );
       newContact.addAddress( newAddress );
-    });
-
-    $(".address-group-extra").each( function( ) {
-      this.remove( );
     });
 
     for( var i = 0; i < contacts.length; i++ )
@@ -74,11 +70,14 @@ $(document).ready( function( ) {
         {
           contactClone.find("#addresses").append( "<li>" +  "---" + "</li>" );
         }
-
       }
       contactClone.attr( "id", "appended" );
       $("#containers-append").append( contactClone );
     }
+
+    $(".address-group-extra").each( function( ) {
+      this.remove( );
+    });
   });
 
   function clearContacts( )
