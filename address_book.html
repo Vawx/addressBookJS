@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Address Book</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Address Book</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <form id="contact">
+            <div class="form-group" id="contact-form-group">
+              <h2>New Contact</h2>
+              <div>
+                <label for="crytpo">First Name</label>
+                 <input type="text" class="form-control" id="first-name">
+              </div>
+              <div>
+                <label for="crytpo">Last Name</label>
+                 <input type="text" class="form-control" id="last-name">
+              </div>
+              <div class="address-group" name="address-group" id="address-group">
+                <h2 id="address-header">Address</h2>
+                <div>
+                  <label for="crytpo">Street</label>
+                   <input type="text" class="form-control" id="street">
+                </div>
+                <div>
+                  <label for="crytpo">City</label>
+                   <input type="text" class="form-control" id="city">
+                </div>
+                <div>
+                  <label for="crytpo">State</label>
+                   <input type="text" class="form-control" id="state">
+                </div>
+                <div>
+                  <label for="crytpo">Zip Code</label>
+                   <input type="text" class="form-control" id="zip-code">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <span class="btn btn-info" name="button" id="add-second-address">Add Another Address</span>
+          </form>
+        </div>
+        <div class="col-xs-3">
+          <h2>Contacts</h2>
+          <div class="row" id="containers-append">
+          </div>
+          <div class="container" id="contacts-container">
+            <p id="name-contact" style="font-size:18px;"></p>
+            <div class="container">
+              <ul id=addresses>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
